@@ -16,7 +16,11 @@ jobs:
       - run:
           name: Run Tests
           command: |
-             pytest test_hello.py
+             make test
+      - run:
+          name: Run Lint
+          command: |
+             make lint
 
 
 workflows:
