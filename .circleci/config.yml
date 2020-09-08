@@ -20,7 +20,7 @@ jobs:
     executor: python/default
     steps:
       - python/uninstall-deps:
-          requirements-file: ./requirements.txt
+          requirements-file: ../requirements.txt
         
 
 workflows:
