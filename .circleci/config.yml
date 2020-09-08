@@ -8,10 +8,12 @@ jobs:
     executor: python/default
     steps:
       - checkout
-      - python/load-cache
+      - python/load-cache:
+           key: pip2
       - python/install-deps:
            local: false
       - python/save-cache
+           key: pip2
       - run:
           name: Run Tests
           command: |
