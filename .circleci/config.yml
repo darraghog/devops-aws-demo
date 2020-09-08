@@ -12,7 +12,7 @@ jobs:
            key: pip2
       - python/install-deps:
            local: false
-      - python/save-cache
+      - python/save-cache:
            key: pip2
       - run:
           name: Run Tests
