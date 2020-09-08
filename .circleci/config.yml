@@ -9,7 +9,7 @@ jobs:
     steps:
       - checkout
       - python/load-cache
-      - python/install-deps
+      - python/install-deps:
           dependency-file: requirements.txt
       - python/save-cache
       - run:
@@ -19,7 +19,7 @@ jobs:
   reset:
     executor: python/default
     steps:
-      - python/uninstall-deps
+      - python/uninstall-deps:
           requirements-file: ./requirements.txt
         
 
