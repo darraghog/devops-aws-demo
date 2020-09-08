@@ -11,8 +11,6 @@ jobs:
       - python/load-cache
       - python/install-deps
       - python/save-cache
-      - python/test:
-          pytest: true
       - run:
           name: Run
           command: |
