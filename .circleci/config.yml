@@ -15,9 +15,15 @@ jobs:
           name: Run
           command: |
             python hello.py
+  reset:
+    executor: python/default
+    steps:
+      - python/uninstall-deps
         
 
 workflows:
   main:
     jobs:
+      - reset
       - build-and-test
+
