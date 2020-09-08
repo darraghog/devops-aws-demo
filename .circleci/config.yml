@@ -11,10 +11,12 @@ jobs:
       - python/load-cache
       - python/install-deps
       - python/save-cache
+      - python/test:
+          pytest: true
       - run:
-          name: Run Tests
+          name: Run Command
           command: |
-            pytest test_hello.py
+            python hello.py
         
 
 workflows:
