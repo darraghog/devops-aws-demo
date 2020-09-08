@@ -14,7 +14,6 @@ jobs:
       - run:
           name: Run Tests
           command: |
-            . .devops-aws-demo/bin/activate
             pytest test_hello.py
         
 
