@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  python: circleci/python@0.2.1
+  python: circleci/python@0.3.2
 
 jobs:
   build-and-test:
@@ -14,7 +14,7 @@ jobs:
       - python/test:
           pytest: true
       - run:
-          name: Run Command
+          name: Run
           command: |
             python hello.py
         
