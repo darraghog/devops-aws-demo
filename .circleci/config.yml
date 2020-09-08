@@ -9,8 +9,8 @@ jobs:
     steps:
       - checkout
       - python/load-cache
-        paths:
-          - .devops-aws-demo/bin
+          paths:
+            - .devops-aws-demo/bin
       - python/install-deps
       - python/save-cache
       - run:
