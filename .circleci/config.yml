@@ -9,13 +9,15 @@ jobs:
     steps:
       - checkout
       - python/load-cache
-      - python/install-deps:
-          dependency-file: ./devops-aws-demo/requirements.txt
+      - python/install-deps
       - python/save-cache
       - run:
           name: Run
           command: |
-            python hello.py
+             echo "PWD=$PWD"
+             echo *
+
+            
         
 workflows:
   main:
