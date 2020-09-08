@@ -10,25 +10,15 @@ jobs:
       - checkout
       - python/load-cache
       - python/install-deps:
-          dependency-file: devops-aws-demo/requirements.txt
+          dependency-file: ./devops-aws-demo/requirements.txt
       - python/save-cache
       - run:
           name: Run
           command: |
             python hello.py
-  reset:
-    executor: python/default
-    steps:
-      - run:
-          command: ls 
-          name: ls
-      - python/uninstall-deps:
-          requirements-file: devops-aws-demo/requirements.txt
         
-
 workflows:
   main:
     jobs:
-      - reset
       - build-and-test
 
