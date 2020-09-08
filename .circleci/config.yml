@@ -9,15 +9,13 @@ jobs:
     steps:
       - checkout
       - python/load-cache
-          paths:
-            - .devops-aws-demo/bin
       - python/install-deps
       - python/save-cache
       - run:
           name: Run Tests
           command: |
             . .devops-aws-demo/bin/activate
-            make test
+            pytest test_hello.py
         
 
 workflows:
