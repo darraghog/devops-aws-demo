@@ -19,6 +19,9 @@ jobs:
   reset:
     executor: python/default
     steps:
+      - run:
+          command: echo $PWD
+          name: Echo
       - python/uninstall-deps:
           requirements-file: ../requirements.txt
         
