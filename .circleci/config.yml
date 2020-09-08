@@ -12,8 +12,8 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: make install
-          name: install dependencies
+          command: Run Tests
+          name: make test
 
 workflows:
   main:
