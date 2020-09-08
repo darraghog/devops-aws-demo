@@ -9,16 +9,15 @@ jobs:
     steps:
       - checkout
       - python/load-cache
-      - python/install-deps
+      - python/install-deps:
+           local: false
       - python/save-cache
       - run:
-          name: Run
+          name: Run Tests
           command: |
-             echo "PWD=$PWD"
-             echo *
+             pytest test_hello.py
 
-            
-        
+
 workflows:
   main:
     jobs:
