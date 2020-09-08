@@ -10,7 +10,7 @@ jobs:
       - checkout
       - python/load-cache
       - python/install-deps:
-          dependency-file: requirements.txt
+          dependency-file: devops-aws-demo/requirements.txt
       - python/save-cache
       - run:
           name: Run
@@ -20,10 +20,10 @@ jobs:
     executor: python/default
     steps:
       - run:
-          command: echo $PWD
-          name: Echo
+          command: ls 
+          name: ls
       - python/uninstall-deps:
-          requirements-file: ../requirements.txt
+          requirements-file: devops-aws-demo/requirements.txt
         
 
 workflows:
